@@ -1,15 +1,25 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import Product from './Product';
 import ProductForm from './ProductForm';
 
 const ProductList = () => {
 
     const [products, setProducts] = useState([
-        {name: 'NOM', description: 'Description du test', price: 12},
+        {name: 'NOM', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', price: 12},
     ]);
+
+
+    useEffect(() => {
+        const storedProducts = JSON.parse(localStorage.getItem('products')) || [];
+        setProducts(storedProducts);
+      }, []);
+    useEffect(() => {
+        localStorage.setItem('products', JSON.stringify(products));
+      }, [products]);
+
     
     const handleAddProduct = (newProduct) => {
-        setProducts(prevState => [...prevState, newProduct]);
+        setProducts((prevState) => [...prevState, newProduct]);
     };
 
     return (

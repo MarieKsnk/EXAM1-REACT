@@ -1,4 +1,5 @@
 import {useState} from 'react'; 
+import './ProductForm.css';
 
 function ProductForm({addProduct}) {
     const [name, setName] = useState('');
@@ -15,21 +16,23 @@ function ProductForm({addProduct}) {
     };
 
     return (
-        <form onSubmit={handleAddProduct}>
-            <h1>Creer un nouveau produit</h1>
-            <div>
+        <form onSubmit={handleAddProduct} className='form-style'>
+            <h2>Créer un nouveau produit</h2>
+            <div className='form-input'>
                 <label>Nom</label>
                 <input value={name} onChange={(e) => setName(e.target.value)}/>
             </div>
-            <div>
+            <div className='form-input'>
                 <label>Description</label>
                 <input value={description} onChange={(e) => setDescription(e.target.value)}/>
             </div>
-            <div>
+            <div className='form-input'>
                 <label>Prix</label>
                 <input value={price} type="number" onChange={(e) => setPrice(e.target.value)}/>
             </div>
-            <button type="submit">Ajouter</button>
+            <div className='button-container'>
+                <button type="submit">Ajouter</button>
+            </div>
         </form>
     );
 }

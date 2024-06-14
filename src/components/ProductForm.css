@@ -1,0 +1,49 @@
+.form-style {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-bottom: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif6;
+  }
+
+  .form-style h2 {
+    color: #3a8cff;
+  }
+
+  .form-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .form-input label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-input input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .button-container {
+    text-align: center;
+  }
+  
+  .form-style button {
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    width: 50%;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif6;
+    font-weight: 800;
+  }
+  
+  .form-style button:hover {
+    background-color: #3a8cff;
+    color: white;
+  }
