@@ -7,11 +7,7 @@ function ProductForm({addProduct}) {
 
     const handleAddProduct = (e) => {
         e.preventDefault();
-        const newProduct = {
-            name,
-            description,
-            price,
-        };
+        const newProduct = {name,description,price,};
         addProduct(newProduct);
         setName('');
         setDescription('');

@@ -5,11 +5,16 @@ import ProductForm from './ProductForm';
 const ProductList = () => {
 
     const [products, setProducts] = useState([
-        {name: 'TEST', description: 'test', price: 12},
+        {name: 'NOM', description: 'Description du test', price: 12},
     ]);
+    
+    const handleAddProduct = (newProduct) => {
+        setProducts(prevState => [...prevState, newProduct]);
+    };
 
     return (
         <>
+            <ProductForm addProduct={handleAddProduct} />
             {products.map((product, idx) => (
                 <Product 
                     key={idx}
